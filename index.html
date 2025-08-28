@@ -6,125 +6,137 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-      body {
-      background-image: url('./bg_ph.gif');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      background-blend-mode: darken; /* Optional: play with this */
-      opacity: 0.99;
-    }   
+    body {
+  background-image: url('./bg_ph.gif'); /* Make sure this file is uploaded to the same directory */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  opacity: 0.99;
+  color: #f1f1f1;
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
 
-    .window {
-      background: rgba(37, 38, 40, 0.92);
-      border: 3px solid #00c853;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 0 20px rgba(0, 255, 100, 0.3);
-    }
+.window {
+  background: rgba(37, 38, 40, 0.4);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(0, 255, 100, 0.4);
+  border-radius: 12px;
+  padding: 2rem;
+}
 
-    .title {
-      font-size: 28px;
-      text-align: center;
-      color: #00e5ff;
-      margin-bottom: 1.5rem;
-      font-family: cursive;
-    }
 
-    .section {
-      margin-bottom: 1.5rem;
-    }
+.title {
+  font-size: 28px;
+  text-align: center;
+  color: #00e5ff;
+  margin-bottom: 1.5rem;
+  font-family: cursive;
+}
 
-    code {
-      background-color: #333;
-      color: #69f0ae;
-      padding: 2px 6px;
-      border-radius: 5px;
-      font-size: 18px;
-    }
+.section {
+  margin-bottom: 1.5rem;
+}
 
-    .highlight {
-      color: #ffd54f;
-    }
+code {
+  background-color: #333;
+  color: #69f0ae;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 18px;
+}
 
-    .note {
-      color: #c792ea;
-      font-style: italic;
-      margin-top: 1rem;
-      text-align: center;
-      border-top: 1px dashed #444;
-      padding-top: 1rem;
-    }
+.highlight {
+  color: #ffd54f;
+}
 
-    .print-button {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background-color: #00e5ff;
-      color: #000;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
-    }
+.note {
+  color: #c792ea;
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+  border-top: 1px dashed #444;
+  padding-top: 1rem;
+}
 
-    .print-button:hover {
-      background-color: #00bcd4;
-    }
+.print-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #00e5ff;
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+}
 
-    @media print {
-      body {
-        background: white;
-        color: black;
-        font-family: serif;
-      }
+.print-button:hover {
+  background-color: #00bcd4;
+}
 
-      .window {
-        border: none;
-        box-shadow: none;
-        background: white;
-        color: black;
-      }
+/* Print-friendly styling */
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-family: serif;
+  }
 
-      .title {
-        color: black;
-      }
+  .window {
+    border: none;
+    box-shadow: none;
+    background: white;
+    color: black;
+  }
 
-      .note {
-        color: #444;
-        border-top: 1px dashed #aaa;
-      }
+  .title {
+    color: black;
+  }
 
-      .print-button {
-        display: none;
-      }
-    }
+  .note {
+    color: #444;
+    border-top: 1px dashed #aaa;
+  }
 
-    @media (max-width: 600px) {
-      body {
-        font-size: 16px;
-        padding: 1rem;
-        background-size: 200px;
-      }
+  .print-button {
+    display: none;
+  }
 
-      .title {
-        font-size: 22px;
-      }
+  body::before {
+    display: none;
+  }
+}
 
-      .print-button {
-        padding: 8px 12px;
-        font-size: 14px;
-      }
-    }
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 1rem;
+    background-size: cover;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .print-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
   </style>
 </head>
 <body>
-
-<!-- Print/Save Button -->
-<button class="print-button" onclick="window.print()">🖨️ Print or Save as PDF</button>
 
 <div class="window">
   <div class="title">💻 Timeless Connection: Deployment Logs 💍</div>
