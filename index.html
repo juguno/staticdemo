@@ -3,23 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <title>Timeless Connection - Deployment Logs</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      background-color: #1b1c1f;
-      color: #f1f1f1;
-      font-family: 'Courier New', monospace;
-      font-size: 20px;
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      background-image: url('ph_mani.jpg');
-      background-size: 300px;
+      body {
+      background-image: url('./bg_ph.gif');
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
       background-attachment: fixed;
-      background-blend-mode: luminosity;
+      background-blend-mode: darken; /* Optional: play with this */
       opacity: 0.99;
-    }
+    }   
 
     .window {
       background: rgba(37, 38, 40, 0.92);
@@ -62,6 +57,24 @@
       padding-top: 1rem;
     }
 
+    .print-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #00e5ff;
+      color: #000;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+    }
+
+    .print-button:hover {
+      background-color: #00bcd4;
+    }
+
     @media print {
       body {
         background: white;
@@ -84,10 +97,34 @@
         color: #444;
         border-top: 1px dashed #aaa;
       }
+
+      .print-button {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+        padding: 1rem;
+        background-size: 200px;
+      }
+
+      .title {
+        font-size: 22px;
+      }
+
+      .print-button {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
+
+<!-- Print/Save Button -->
+<button class="print-button" onclick="window.print()">🖨️ Print or Save as PDF</button>
 
 <div class="window">
   <div class="title">💻 Timeless Connection: Deployment Logs 💍</div>
@@ -100,7 +137,7 @@
       d/o Mr. [Partner's Father Name] & Mrs. [Partner's Mother Name]
   </div>
 
- <div class="section">
+  <div class="section">
     🌍 Location: <span class="highlight">where earth meets sky</span><br>
     📅 Date: <span class="highlight">Month date, year</span><br>
     📦 Package: <code>TimelessConnection.jar</code><br>
@@ -138,4 +175,3 @@
 
 </body>
 </html>
-
