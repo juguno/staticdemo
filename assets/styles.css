@@ -1,5 +1,5 @@
 body {
-  background-image: url('Bg_pic.jpg'); /* Make sure this file is uploaded to the same directory */
+  background-image: url('assets/Bg_pic.jpg'); /* Make sure this file is uploaded to the same directory */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
